@@ -1,0 +1,63 @@
+.itin-page { min-height: 100vh; }
+.itin-header { background: var(--green); padding: 60px 0; }
+.itin-eyebrow { font-size: 12px; font-weight: 600; color: rgba(201,168,76,0.6); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+.itin-header h1 { font-family: var(--font-display); font-size: clamp(32px,4vw,52px); font-weight: 800; color: var(--gold); margin-bottom: 10px; }
+.itin-subtitle { font-size: 15px; color: rgba(245,240,232,0.45); }
+.itin-body { padding: 48px 0 60px; }
+.itin-empty { text-align: center; padding: 100px 20px; }
+.itin-empty-icon { font-size: 64px; margin-bottom: 20px; }
+.itin-empty h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+.itin-empty p { color: var(--text-light); font-size: 15px; }
+
+.itin-stats { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+.stat-card {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--green); border-radius: var(--radius-md);
+  padding: 24px 32px; min-width: 130px; gap: 4px;
+  border: 1px solid rgba(201,168,76,0.15);
+}
+.stat-icon { font-size: 22px; margin-bottom: 4px; }
+.stat-card strong { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--gold); line-height: 1; }
+.stat-card span { font-size: 12px; color: rgba(245,240,232,0.4); letter-spacing: 0.5px; text-transform: uppercase; }
+
+.itin-cards { display: flex; flex-direction: column; gap: 12px; }
+.itin-card {
+  display: flex; align-items: center; gap: 20px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 20px 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.itin-card:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.itin-card-num {
+  font-family: var(--font-display); font-size: 28px; font-weight: 800;
+  color: rgba(201,168,76,0.25); flex-shrink: 0; min-width: 44px;
+}
+.itin-card-body { flex: 1; }
+.itin-card-body h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--green); margin-bottom: 5px; }
+.itin-city { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text-light); margin-bottom: 5px; }
+.itin-city svg { fill: var(--gold); flex-shrink: 0; }
+.itin-scene { font-size: 12px; color: var(--text-mid); font-style: italic; margin-bottom: 6px; font-family: var(--font-serif); }
+.itin-movie-tag { font-size: 11px; background: rgba(26,46,26,0.08); color: var(--green-mid); padding: 3px 10px; border-radius: 12px; font-weight: 600; }
+.itin-card-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.itin-nav-btn {
+  background: var(--green); color: var(--gold); padding: 9px 16px;
+  border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s ease; border: none;
+}
+.itin-nav-btn:hover { background: var(--green-mid); }
+.itin-wiki-btn {
+  background: none; color: var(--green); border: 1.5px solid var(--border);
+  padding: 8px 14px; border-radius: var(--radius-sm); font-size: 13px;
+  font-weight: 600; text-decoration: none; transition: all 0.2s ease;
+}
+.itin-wiki-btn:hover { border-color: var(--gold); color: var(--gold-dk); }
+.itin-remove-btn {
+  background: none; border: 1.5px solid var(--border); color: var(--text-light);
+  width: 34px; height: 34px; border-radius: 50%; font-size: 14px;
+  cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center;
+}
+.itin-remove-btn:hover { border-color: var(--red); color: var(--red); }
+@media (max-width: 768px) {
+  .itin-card { flex-direction: column; align-items: flex-start; }
+  .itin-card-actions { width: 100%; }
+}
